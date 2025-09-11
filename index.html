@@ -7,20 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div id="titleHeader">
-            <p id="normalText">Criptografia</p>
-            <p id="smallText">- Cifra de César</p>
-        </div>
-    </header>
     <main>
-        <h1 class="centralizado">Cifra de César</h1>
-        <label for="texto">Texto para ser Criptografado:</label>
-        <input type="text" id="texto" class="centralizado">
-        <label for="numero">Deslocamento das letras:</label>
-        <input type="number" id="numero" class="centralizado">
-        <button>Enviar</button>
-        <p id="resultado" class="centralizado">Texto Criptografado: </p>
+        <div id="titleMain">
+                <p>Criptografia</p>
+                <p id="smallText"> - Cifra de César</p>
+        </div>
+        <div id="containerMain">
+            <section id="sectionTexto">
+                <label for="texto">Texto para ser Criptografado:</label>
+                <input type="text" id="texto" class="centralizado">
+            </section>
+            <section id="sectionNumero">
+                <label for="numero">Deslocamento das letras:</label>
+                <input type="text" id="numero" class="centralizado">
+            </section>
+            <button>Enviar</button>
+            <!-- <p id="resultado">Texto Criptografado: </p> -->
+        </div>
     </main>
 
     <script src="script.js"></script>
