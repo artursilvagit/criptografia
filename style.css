@@ -7,18 +7,18 @@
 }
 body {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
     flex-direction: column;
+    align-items: center;
+    gap: 4vw;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 1vw;
+    padding: 2vw;
     width: 100vw;
     height: 100vh;
     font-family: "Oswald", sans-serif;
     background-color: rgb(225, 237, 243);
 }
 
-main {
+main, section#resultado {
     width: 95%;
     background-color: rgb(251, 251, 251);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.288);
@@ -33,8 +33,8 @@ main div#titleMain {
     font-size: 6vw;
     color: rgba(255, 255, 255, 0.918);
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.281);
-    background-image: linear-gradient(to right, rgb(81, 185, 255), rgb(23, 110, 168));
     border-radius: 7px 7px 0px 0px;
+    background-image: linear-gradient(to right, rgb(81, 185, 255), rgb(23, 110, 168));
 }
 main #smallText {
     font-size: 0.7em;
@@ -51,8 +51,6 @@ main div#containerMain {
     width: 100%;
     padding: 2vw;
     margin: auto;
-    overflow-wrap: break-word;
-    word-break: break-word;
     transition: color 0.2s;
 }
 main section {
@@ -67,6 +65,9 @@ main input {
     width: 100%;
     font-size: 4.5vw;
     background-color: rgb(240, 240, 240);
+    border-radius: 7px;
+    border: 2px solid rgb(160, 160, 160);
+    padding-left: 1.5vw;
 }
 main button {
     width: 100%;
@@ -86,7 +87,37 @@ main button:hover {
     transition: 0.2s;
 }
 
-@media screen and (min-width: 1024px) {
+section#resultado h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3vw;
+    font-size: 5vw;
+    color: rgba(255, 255, 255, 0.918);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.281);
+    border-radius: 7px 7px 0px 0px;
+    background-image: linear-gradient(to right, rgb(81, 185, 255), rgb(23, 110, 168));
+}
+section#resultado > #textoResultado {
+    color: rgba(30, 47, 58, 0.877);
+    padding: 2vw;
+    font-size: 4.5vw;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+span#textoCriptografado {
+    opacity: 0.8;
+    color: rgb(24, 86, 167);
+}
+
+
+
+@media screen and (min-width: 600px) {
+    body {
+        gap: 2vw;
+    }
+
     main {
         width: 70%;
         border-radius: 10px;
@@ -108,38 +139,64 @@ main button:hover {
     main input {
         height: 3vw;
         font-size: 2vw;
+        border-radius: 15px;
     }
     main button {
         font-size: 1.5vw;
         padding: 0.7vw;
     }
+    
+    section#resultado {
+        width: 70%;
+    }
+    section#resultado h1 {
+        font-size: 2vw;
+    }
+    section#resultado > #textoResultado {
+        font-size: 2vw;
+        padding: 1vw;
+    }
 }
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 1350px) {
+    body{
+        gap: 1vw;
+    }
+
     main {
-        width: 60%;
-        border-radius: 20px;
+        width: 40%;
     }
     main div#titleMain {
-        font-size: 2vw;
-        padding: 0.5vw;
+        font-size: 1.5vw;
+        padding: 0.3vw;
         gap: 0.3vw;
-        border: 20px 20px 0px 0px;
+        border: 25px 25px 0px 0px;
     }
     main div#containerMain {
         gap: 0.7vw;
         padding: 1vw;
-        border-radius: 20px;
+        border-radius: 25px;
     }
     main section {
-        font-size: 2.5vw;
+        font-size: 1.5vw;
     }
     main input {
-        height: 3vw;
-        font-size: 2vw;
+        height: 2vw;
+        font-size: 1.5vw;
+        border: 2px solid rgb(160, 160, 160);
     }
-}
+    main button {
+        font-size: 1vw;
+        padding: 0.4vw;
+    }
 
-div#a {
-    font-size: 100px;
-    width: 600px;
+    section#resultado {
+        width: 40%;
+    }
+    section#resultado h1 {
+        font-size: 1.3vw;
+    }
+    section#resultado > #textoResultado {
+        font-size: 1.3vw;
+        padding: 0.5vw;
+    }
 }

@@ -3,7 +3,7 @@ let textoCriptografado = ""
 const inputText = document.querySelector("#texto")
 const inputNumber = document.querySelector("#numero")
 const botao = document.querySelector("button")
-const p = document.querySelector("#resultado")
+const p = document.querySelector("#textoResultado")
 inputText.value = ""
 inputNumber.value = ""
 
@@ -20,5 +20,5 @@ botao.addEventListener("click", () => {
             textoCriptografado += caractere
         }
     }
-    p.textContent = `Texto Criptografado: ${textoCriptografado}`
+    p.innerHTML = `Texto Criptografado: <span id="textoCriptografado">${textoCriptografado}</span>`
 })
